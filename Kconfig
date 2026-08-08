@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: MIT
+
+# The official BMP Boost board definition already enables ZMK USB, BLE,
+# settings storage, UF2 output, boot retention, and non-LiPo battery support.
+# Mark it as explicitly compatible so ZMK's Zephyr 4.1 build guard accepts it.
+config ZMK_BOARD_COMPAT
+    default y if BOARD_BMP_BOOST

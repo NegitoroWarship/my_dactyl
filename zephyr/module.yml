@@ -1,4 +1,5 @@
 name: zmk-keyboard-sakoa-dactyl
 build:
+  kconfig: Kconfig
   settings:
     board_root: .
