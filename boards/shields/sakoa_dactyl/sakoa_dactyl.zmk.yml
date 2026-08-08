@@ -1,0 +1,10 @@
+file_format: "1"
+id: sakoa_dactyl
+name: Sakoa Dactyl
+type: shield
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - sakoa_dactyl_left
+  - sakoa_dactyl_right
