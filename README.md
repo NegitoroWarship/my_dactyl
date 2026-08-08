@@ -4,7 +4,7 @@ Hand-wired wireless split keyboard using two BMP Boost controllers.
 
 ## Build targets
 
-- Board: `bmp_boost//zmk` (ZMK-compatible Zephyr 4.1 board variant)
+- Board: `bmp_boost//zmk` (local Zephyr board extension for ZMK compatibility)
 - `sakoa_dactyl_left`: central, 5 rows x 6 columns
 - `sakoa_dactyl_right`: peripheral, 6 rows x 7 columns
 - `settings_reset`: clears saved BLE/settings before the first paired flash

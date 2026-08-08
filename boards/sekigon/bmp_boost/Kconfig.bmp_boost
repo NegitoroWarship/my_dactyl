@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: MIT
+
+config BOARD_BMP_BOOST
+    select ZMK_BOARD_COMPAT if BOARD_BMP_BOOST_NRF52840_ZMK
