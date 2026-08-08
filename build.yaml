@@ -1,7 +1,7 @@
 include:
-  - board: bmp_boost
+  - board: bmp_boost//zmk
     shield: sakoa_dactyl_left
-  - board: bmp_boost
+  - board: bmp_boost//zmk
     shield: sakoa_dactyl_right
-  - board: bmp_boost
+  - board: bmp_boost//zmk
     shield: settings_reset
