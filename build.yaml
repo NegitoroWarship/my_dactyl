@@ -5,3 +5,6 @@ include:
     shield: sakoa_dactyl_right
   - board: bmp_boost
     shield: settings_reset
+  # BMP Boost公式READMEが指定するPro Micro GPIO単体テスター。
+  - board: bmp_boost
+    shield: tester_pro_micro
