@@ -5,3 +5,8 @@
 # Mark it as explicitly compatible so ZMK's Zephyr 4.1 build guard accepts it.
 config ZMK_BOARD_COMPAT
     default y if BOARD_BMP_BOOST
+
+config SAKOA_USB_HID_PROBE
+    bool
+    default y if SHIELD_SAKOA_USB_AUTO_TEST
+    depends on USB_DEVICE_HID
