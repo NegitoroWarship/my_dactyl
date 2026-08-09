@@ -1,0 +1,46 @@
+#include <dt-bindings/zmk/kscan_mock.h>
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &auto_kscan;
+        zmk,physical-layout = &auto_layout;
+    };
+
+    /*
+     * Generate ten A press/release cycles without using any GPIO. Each event
+     * is one second apart, so the sequence lasts long enough to observe after
+     * USB enumeration.
+     */
+    auto_kscan: kscan {
+        compatible = "zmk,kscan-mock";
+        rows = <1>;
+        columns = <1>;
+        events = <
+            ZMK_MOCK_PRESS(0, 0, 1000) ZMK_MOCK_RELEASE(0, 0, 1000)
+            ZMK_MOCK_PRESS(0, 0, 1000) ZMK_MOCK_RELEASE(0, 0, 1000)
+            ZMK_MOCK_PRESS(0, 0, 1000) ZMK_MOCK_RELEASE(0, 0, 1000)
+            ZMK_MOCK_PRESS(0, 0, 1000) ZMK_MOCK_RELEASE(0, 0, 1000)
+            ZMK_MOCK_PRESS(0, 0, 1000) ZMK_MOCK_RELEASE(0, 0, 1000)
+            ZMK_MOCK_PRESS(0, 0, 1000) ZMK_MOCK_RELEASE(0, 0, 1000)
+            ZMK_MOCK_PRESS(0, 0, 1000) ZMK_MOCK_RELEASE(0, 0, 1000)
+            ZMK_MOCK_PRESS(0, 0, 1000) ZMK_MOCK_RELEASE(0, 0, 1000)
+            ZMK_MOCK_PRESS(0, 0, 1000) ZMK_MOCK_RELEASE(0, 0, 1000)
+            ZMK_MOCK_PRESS(0, 0, 1000) ZMK_MOCK_RELEASE(0, 0, 1000)
+        >;
+    };
+
+    auto_transform: keymap_transform {
+        compatible = "zmk,matrix-transform";
+        rows = <1>;
+        columns = <1>;
+        map = <RC(0,0)>;
+    };
+
+    auto_layout: physical_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Automatic A Test";
+        kscan = <&auto_kscan>;
+        transform = <&auto_transform>;
+    };
+};
