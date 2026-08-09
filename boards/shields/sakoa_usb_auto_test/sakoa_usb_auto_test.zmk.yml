@@ -1,0 +1,7 @@
+file_format: "1"
+id: sakoa_usb_auto_test
+name: Sakoa USB Auto Test
+type: shield
+requires: [pro_micro]
+features:
+  - keys

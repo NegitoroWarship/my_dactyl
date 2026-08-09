@@ -12,3 +12,7 @@ include:
   - board: bmp_boost
     shield: sakoa_gpio_logger
     snippet: zmk-usb-logging
+  # GPIOを使わず、Aの押下・解放を自動生成するUSB HID単体診断用。
+  - board: bmp_boost
+    shield: sakoa_usb_auto_test
+    snippet: zmk-usb-logging
