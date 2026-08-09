@@ -1,0 +1,2 @@
+config SHIELD_SAKOA_GPIO_LOGGER
+    def_bool $(shields_list_contains,sakoa_gpio_logger)

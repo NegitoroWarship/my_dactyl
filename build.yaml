@@ -8,3 +8,7 @@ include:
   # BMP Boost公式READMEが指定するPro Micro GPIO単体テスター。
   - board: bmp_boost
     shield: tester_pro_micro
+  # P0.05/P0.19をポーリングし、USB CDCへkscanデバッグログを出す診断用。
+  - board: bmp_boost
+    shield: sakoa_gpio_logger
+    snippet: zmk-usb-logging

@@ -1,0 +1,38 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &logger_kscan;
+        zmk,physical-layout = &logger_layout;
+    };
+
+    /*
+     * Direct raw nRF52840 GPIO test:
+     *   position 0 = BMP Boost silk 5/A3 = P0.05
+     *   position 1 = BMP Boost silk 19   = P0.19
+     */
+    logger_kscan: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        debounce-press-ms = <10>;
+        debounce-release-ms = <10>;
+        poll-period-ms = <10>;
+        input-gpios
+            = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&gpio0 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            ;
+    };
+
+    logger_transform: keymap_transform {
+        compatible = "zmk,matrix-transform";
+        rows = <1>;
+        columns = <2>;
+        map = <RC(0,0) RC(0,1)>;
+    };
+
+    logger_layout: physical_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "P0.05 and P0.19";
+        kscan = <&logger_kscan>;
+        transform = <&logger_transform>;
+    };
+};

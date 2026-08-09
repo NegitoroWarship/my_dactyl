@@ -1,0 +1,12 @@
+if SHIELD_SAKOA_GPIO_LOGGER
+
+config ZMK_KEYBOARD_NAME
+    default "GPIO Logger"
+
+config ZMK_BLE
+    def_bool n
+
+config SETTINGS
+    def_bool n
+
+endif

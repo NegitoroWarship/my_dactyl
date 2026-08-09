@@ -1,0 +1,7 @@
+file_format: "1"
+id: sakoa_gpio_logger
+name: Sakoa GPIO Logger
+type: shield
+requires: [pro_micro]
+features:
+  - keys
