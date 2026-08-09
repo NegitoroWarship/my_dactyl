@@ -2,6 +2,71 @@
 
 Hand-wired wireless split keyboard using two BMP Boost controllers.
 
+## 現在のキーマップ
+
+キーボードを表向きにして、使用者側から見た配置です。キーキャップに印字されて
+いる文字ではなく、PCへ実際に送信されるキー／操作を示します。
+
+### ベースレイヤー
+
+```text
+LEFT HAND                                      RIGHT HAND
+
+[ 1 ][ 2 ][ 3 ][ 4 ][ 5 ][ 6 ]       [ 7 ][ 8 ][ 9 ][ 0 ][ - ][ = ][ \ ]
+[Tab][ Q ][ W ][ E ][ R ][ T ]       [ Y ][ U ][ I ][ O ][ P ][ [ ][ ] ]
+[Ctrl][ A ][ S ][ D ][ F ][ G ]      [ H ][ J ][ K ][ L ][ ; ][ ' ][Enter]
+[Shift][ Z ][ X ][ C ][ V ][ B ]     [ N ][ M ][ , ][ . ][ / ][ Up][Shift]
+
+                    [Win][Alt][Space] [Bksp][Del][Fn][ ` ][Left][Down][Right]
+                                                                    [Esc]
+                                                     (bottom protruding key)
+```
+
+- `Fn` は押している間だけ有効になるレイヤーキーです。
+- 右手の `Esc` は、右下に1個だけ飛び出しているキーです。
+- `\` は Shift と同時に押すと `|` になります（PC側のキーボード配列設定に
+  よって変わる場合があります）。
+
+### Functionレイヤー（`Fn` を押している間）
+
+下図に書かれたキーだけが変化します。`--` の位置は透過で、ベースレイヤーと
+同じキーとして動作します。
+
+```text
+LEFT HAND                                      RIGHT HAND
+
+[F1 ][F2 ][F3 ][F4 ][F5 ][F6 ]       [F7 ][F8 ][F9 ][F10][F11][F12][ -- ]
+[ --][BT1][BT2][BT3][BT4][BT5]       [ --][ --][ --][ --][ --][ --][ --]
+[ --][ --][ --][ --][ --][ --]      [ --][ --][ --][ --][ --][ --][ --]
+[ --][ --][ --][ --][ --][CLR]      [ --][ --][ --][ --][ --][ --][ --]
+
+                    [ --][ --][ --]  [ --][ --][Fn ][ --][ --][ --][ --]
+                                                                  [PrtSc]
+```
+
+| キー操作 | 結果 |
+| --- | --- |
+| `Fn+1` ... `Fn+0` | `F1` ... `F10` |
+| `Fn+-` / `Fn+=` | `F11` / `F12` |
+| `Fn+Esc` | Print Screen |
+| `Fn+Q` / `Fn+W` / `Fn+E` / `Fn+R` / `Fn+T` | Bluetooth接続先1 / 2 / 3 / 4 / 5を選択 |
+| `Fn+B` | 現在選択中のBluetooth接続先について、保存されたペアリング情報を削除 |
+
+### キーキャップの印字と実際の動作が異なるキー
+
+| 側 | キーキャップの印字 | 実際の動作 |
+| --- | --- | --- |
+| 左手 | `Caps Lock` | 左Ctrl |
+| 左手 | `Meta` | Windows/GUI |
+| 左手 | `Super` | Space |
+| 右手 | `Scroll` | `\`（Shiftと同時に押すと `\|`） |
+| 右手 | `Cmd` | 右Shift |
+| 右手 | `Func` | 押している間Functionレイヤーを有効化 |
+
+ファームウェア上の定義は
+[`boards/shields/sakoa_dactyl/sakoa_dactyl.keymap`](boards/shields/sakoa_dactyl/sakoa_dactyl.keymap)
+を参照してください。
+
 ## Build targets
 
 - Board: `bmp_boost` (the module Kconfig marks the official BMP Boost board as ZMK-compatible)
