@@ -98,3 +98,17 @@ Diode direction is `col2row`.
 
 If a thumb key is electrically connected to a different column, update only the
 `map` in `boards/shields/sakoa_dactyl/sakoa_dactyl.dtsi` after a continuity test.
+
+## 由来 / Credits
+
+このリポジトリは [sekigon-gonnoc/zmk-bmp-boost-sample](https://github.com/sekigon-gonnoc/zmk-bmp-boost-sample)
+をベースにしています。BMP Boost 用の ZMK コンポーネントは
+[sekigon-gonnoc/zmk-component-bmp-boost](https://github.com/sekigon-gonnoc/zmk-component-bmp-boost)
+を利用しています。
+
+This repository is based on
+[sekigon-gonnoc/zmk-bmp-boost-sample](https://github.com/sekigon-gonnoc/zmk-bmp-boost-sample)
+and builds on
+[sekigon-gonnoc/zmk-component-bmp-boost](https://github.com/sekigon-gonnoc/zmk-component-bmp-boost)
+for BMP Boost support. Both are by [sekigon-gonnoc](https://github.com/sekigon-gonnoc)
+and licensed under the MIT License; see [LICENSE](LICENSE).
