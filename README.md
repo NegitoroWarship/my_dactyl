@@ -1,6 +1,7 @@
 # Sakoa Dactyl — BMP Boost / ZMK
 
-Hand-wired wireless split keyboard using two BMP Boost controllers.
+Hand-wired wireless split keyboard using two BMP Boost controllers.  
+See also: [My blog](https://negitorowarship.github.io/blog/posts/building-a-63-key-asymmetric-dactyl-manuform/)
 
 ## 現在のキーマップ
 
