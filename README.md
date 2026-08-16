@@ -18,13 +18,15 @@ LEFT HAND                                      RIGHT HAND
 [Ctrl][ A ][ S ][ D ][ F ][ G ]      [ H ][ J ][ K ][ L ][ ; ][ ' ][Enter]
 [Shift][ Z ][ X ][ C ][ V ][ B ]     [ N ][ M ][ , ][ . ][ / ][ Up][Shift]
 
-                    [Win][Alt][Space] [Bksp][Del][Fn][ ` ][Left][Down][Right]
-                                                                    [Esc]
+                    [Win][Alt][Space] [Bksp][Del][Esc][ ` ][Left][Down][Right]
+                                                                     [Fn]
                                                      (bottom protruding key)
 ```
 
 - `Fn` は押している間だけ有効になるレイヤーキーです。
-- 右手の `Esc` は、右下に1個だけ飛び出しているキーです。
+- 右手の `Fn` は、右下に1個だけ飛び出しているキーです。親指でこのキーを
+  押しながら、ほかのキーを押します。
+- 右手の `Esc` は、右親指列の `Del` と `` ` `` の間にあります。
 - `\` は Shift と同時に押すと `|` になります（PC側のキーボード配列設定に
   よって変わる場合があります）。
 
@@ -41,8 +43,8 @@ LEFT HAND                                      RIGHT HAND
 [ --][ --][ --][ --][ --][ --]      [ --][ --][ --][ --][ --][ --][ --]
 [ --][ --][ --][ --][ --][CLR]      [ --][ --][ --][ --][ --][ --][ --]
 
-                    [ --][ --][ --]  [ --][ --][Fn ][ --][ --][ --][ --]
-                                                                  [PrtSc]
+                    [ --][ --][ --]  [ --][ --][PrtSc][ --][ --][ --][ --]
+                                                                     [Fn]
 ```
 
 | キー操作 | 結果 |
@@ -62,7 +64,8 @@ LEFT HAND                                      RIGHT HAND
 | 左手 | `Super` | Space |
 | 右手 | `Scroll` | `\`（Shiftと同時に押すと `\|`） |
 | 右手 | `Cmd` | 右Shift |
-| 右手 | `Func` | 押している間Functionレイヤーを有効化 |
+| 右手 | `Func` | Esc |
+| 右手 | `Esc` | 押している間Functionレイヤーを有効化 |
 
 ファームウェア上の定義は
 [`boards/shields/sakoa_dactyl/sakoa_dactyl.keymap`](boards/shields/sakoa_dactyl/sakoa_dactyl.keymap)
@@ -89,8 +92,8 @@ Diode direction is `col2row`.
 - Left main keys: `R0-R3 / C0-C5`.
 - Left thumb keys: `R4/C3 = Win`, `R4/C4 = Alt`, `R4/C5 = Space`.
 - Right main keys: `R0-R3 / C0-C6`.
-- Right thumb row: `R4/C0-C6 = Backspace, Delete, Func, Grave, Left, Down, Right`.
-- Right single-key row: `R5/C0 = Esc`.
+- Right thumb row: `R4/C0-C6 = Backspace, Delete, Esc, Grave, Left, Down, Right`.
+- Right single-key row: `R5/C0 = Func`.
 - `Func` is momentary layer 1.
 - `Func+1` through `Func+0` produce `F1` through `F10`.
 - `Func+-` produces `F11`, `Func+=` produces `F12`, and `Func+Esc` produces
