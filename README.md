@@ -27,6 +27,7 @@ LEFT HAND                                      RIGHT HAND
 - 右手の `Fn` は、右下に1個だけ飛び出しているキーです。親指でこのキーを
   押しながら、ほかのキーを押します。
 - 右手の `Esc` は、右親指列の `Del` と `` ` `` の間にあります。
+- 右手の `Esc` と `Func` のキーキャップも、上記の配置に合わせて入れ替えます。
 - `\` は Shift と同時に押すと `|` になります（PC側のキーボード配列設定に
   よって変わる場合があります）。
 
@@ -64,8 +65,6 @@ LEFT HAND                                      RIGHT HAND
 | 左手 | `Super` | Space |
 | 右手 | `Scroll` | `\`（Shiftと同時に押すと `\|`） |
 | 右手 | `Cmd` | 右Shift |
-| 右手 | `Func` | Esc |
-| 右手 | `Esc` | 押している間Functionレイヤーを有効化 |
 
 ファームウェア上の定義は
 [`boards/shields/sakoa_dactyl/sakoa_dactyl.keymap`](boards/shields/sakoa_dactyl/sakoa_dactyl.keymap)
